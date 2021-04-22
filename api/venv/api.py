@@ -18,10 +18,14 @@ def test():
 	#receiver = messageInfo['receiver']
 	#message = messageInfo['message']
 
+	DB_MM.sendMessage("Ryan","Akriti","/test message")
+	DB_MM.sendMessage("Ryan","Julie","/test2 message")
+	DB_MM.sendMessage("Akriti","Ryan","/test3 message")
+
 	print("  so:",username,flush=True)
 
 	msgs = DB_MM.getUserMessageFromDB(username)
-	msgs += DB_mm.getUserSentMessageFromDB(username)
+	msgs += DB_MM.getUserSentMessageFromDB(username)
 
 	print("  msgs:", msgs, flush=True)
 

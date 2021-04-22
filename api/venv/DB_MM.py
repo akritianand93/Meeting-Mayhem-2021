@@ -57,7 +57,7 @@ class UserSentMessages(db.Model):
 	time_choice = db.Column(db.String(4), nullable=False)
 	place_choice = db.Column(db.String(20), nullable=False)
 	key_choice = db.Column(db.String(20), nullable=False)
-	message = db.Column(db.String(40), nullable=False)
+	message = db.Column(db.String(320), nullable=False) #TODO: Arbitrary length string.
 	encrypt_check = db.Column(db.Boolean, nullable=False)
 	message_id =  db.Column(db.Integer, unique=True, nullable=False)
 	outgoing = db.Column(db.Boolean, nullable=False) #TODO: For Adversary message passing
